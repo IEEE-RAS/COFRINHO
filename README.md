@@ -10,9 +10,9 @@ https://www.tinkercad.com/things/0SiEbaC0pgp-lcd-sem-i2c?sharecode=3_n9X8H0lwXmi
 
 - Arduino Uno (ou similar)
 - Display LCD 16x2
-- Sensor de luz (LDR) para detectar as moedas
-- LED para iluminar a área do LDR
-- Botão para resetar o valor acumulado
+- 5x Sensor de luz (LDR) para detectar as moedas
+- 5x LED para iluminar a área do LDR
+- 1x Botão para resetar o valor acumulado
 - Resistores, fios e componentes básicos de eletrônica
 - Rampa e estrutura inclinada para separar as moedas (em construção)
 
