@@ -2,7 +2,7 @@
 
 Este projeto consiste em um contador de moedas usando um Arduino, um LED, um LDR (sensor de luz) e um display LCD. Ele permite que você insira diferentes moedas e acompanhe o valor acumulado em um display LCD.
 
-Esquema tinkecard
+Esquema eletrico no tinkecard
 ![image](https://github.com/IEEE-RAS/COFRINHO/assets/97792380/7fa1c818-b04e-42d5-9ad8-96a25e6b1507)
 https://www.tinkercad.com/things/0SiEbaC0pgp-lcd-sem-i2c?sharecode=3_n9X8H0lwXmiTLT79irRW0Y71OyNjX-GP4S7P6LIL8
 
@@ -14,7 +14,7 @@ https://www.tinkercad.com/things/0SiEbaC0pgp-lcd-sem-i2c?sharecode=3_n9X8H0lwXmi
 - LED para iluminar a área do LDR
 - Botão para resetar o valor acumulado
 - Resistores, fios e componentes básicos de eletrônica
-- rampa inclinada para separar as moedas(em construção)
+- Rampa e estrutura inclinada para separar as moedas (em construção)
 
 ## Configuração do Projeto
 
