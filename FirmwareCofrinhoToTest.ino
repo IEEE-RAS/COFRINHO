@@ -7,8 +7,7 @@ int backLight = 13;
 int LEDS = 8;
 
 const int ldrPin = A0;
-int valorAcumuladoEnderecoInicial = 0;
-int numeroBytesValor = sizeof(float); // Determina o número de bytes do float
+int valorAcumuladoEndereco = 0;
 
 float valorAcumulado = 0.0;
 
@@ -36,7 +35,7 @@ void setup() {
   pinMode(botaoPin, INPUT);
 
   // Lê o valor acumulado da EEPROM
-  EEPROM.get(valorAcumuladoEnderecoInicial, valorAcumulado);
+  EEPROM.get(valorAcumuladoEndereco, valorAcumulado);
 }
 
 void loop() {
@@ -49,7 +48,7 @@ void loop() {
   if (botaoPressionado) {
     // Se o botão foi pressionado, resete o valor acumulado e salve na EEPROM
     valorAcumulado = 0.0;
-    EEPROM.put(valorAcumuladoEnderecoInicial, valorAcumulado);
+    EEPROM.put(valorAcumuladoEndereco, valorAcumulado);
     botaoPressionado = false; // Reseta a flag do botão
   }
 
@@ -61,33 +60,21 @@ void loop() {
   int LDR_1R = analogRead(A4);
 
   // Atualize o valor acumulado com base nos LDRs
-  if (LDR_10C < 500) {
-    valorAcumulado += 0.1;
-  }
-  if (LDR_5C < 500){
-    valorAcumulado += 0.05;
-  }
-  if (LDR_50C < 500) {
-    valorAcumulado += 0.5;
-  }
-  if (LDR_25C < 500){
+  
+  if (LDR_25C < 250){
     valorAcumulado += 0.25;
   }
-  if (LDR_1R < 500){
-    valorAcumulado += 1.0;
-  }
+  
 
-  // Escreva o valor acumulado na EEPROM byte a byte
-  for (int i = 0; i < numeroBytesValor; i++) {
-    byte* ptr = (byte*)&valorAcumulado;
-    EEPROM.write(valorAcumuladoEnderecoInicial + i, *ptr);
-    ptr++;
-  }
+  // Escreva o valor acumulado na EEPROM
+  EEPROM.put(valorAcumuladoEndereco, valorAcumulado);
 
   // Atualize o display LCD com o valor acumulado
   lcd.setCursor(0, 0);
   lcd.print("Dinheiro:");
   lcd.setCursor(2, 1);
   lcd.print(valorAcumulado);
+  lcd.setCursor(11, 1);
+  lcd.print(LDR_25C);
   delay(200);
 }
