@@ -6,6 +6,9 @@ Esquema elétrico no tinkercard
 ![image](https://github.com/IEEE-RAS/COFRINHO/assets/97792380/5e79e7c3-0970-4d03-8d9c-aa846c30e662)
 https://www.tinkercad.com/things/0SiEbaC0pgp-lcd-sem-i2c?sharecode=3_n9X8H0lwXmiTLT79irRW0Y71OyNjX-GP4S7P6LIL8
 
+Esquema com Botão: 
+
+https://www.tinkercad.com/things/lFlIIqTEBOB-copy-of-lcd-sem-i2c/editel?tenant=circuits
 ## Componentes Necessários
 
 - Arduino Uno (ou similar)
