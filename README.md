@@ -8,7 +8,11 @@ https://www.tinkercad.com/things/0SiEbaC0pgp-lcd-sem-i2c?sharecode=3_n9X8H0lwXmi
 
 Esquema com Botão: 
 
+ATUALIZADO 29-08
 https://www.tinkercad.com/things/lFlIIqTEBOB-copy-of-lcd-sem-i2c/editel?tenant=circuits
+
+
+ANTERIOR https://www.tinkercad.com/things/lFlIIqTEBOB-copy-of-lcd-sem-i2c/editel?tenant=circuits
 ## Componentes Necessários
 
 - Arduino Uno (ou similar)
