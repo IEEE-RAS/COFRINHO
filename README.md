@@ -1,4 +1,4 @@
-# Contador de Moedas - Arduino
+# Contador de Moedas - Arduino.
 
 Este projeto consiste em um contador de moedas usando um Arduino, LEDs, LDRs (sensor de luz) e um display LCD. Ele permite que você insira diferentes moedas e acompanhe o valor acumulado em um display LCD.
 
