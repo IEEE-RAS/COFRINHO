@@ -1,18 +1,20 @@
 #include <LiquidCrystal.h>
 #include <EEPROM.h>
 
-LiquidCrystal lcd(12, 11, 10, 5, 4, 3, 2);
-
-int backLight = 13;
-int LEDS = 8;
-
 const int ldrPin = A0;
+const int backLight = 13;
+const int LEDS = 8;
+
 int valorAcumuladoEndereco = 0;
 
 float valorAcumulado = 0.0;
 
 bool botaoPressionado = false;
 const int botaoPin = 7; // Pino para o botão
+
+const int rs=12, en=11, rw=10, d4=5, d5=4,d6=3,d7=2; 
+LiquidCrystal lcd(rs, en, rw, d4, d5, d6, d7);
+
 
 void setup() {
   pinMode(LEDS, OUTPUT);
@@ -39,6 +41,9 @@ void setup() {
 }
 
 void loop() {
+
+  /*
+  //Bloco se formos utilizar o botão para resetar
   // Verifica se o botão foi pressionado
   if (digitalRead(botaoPin) == HIGH) {
     botaoPressionado = true;
@@ -51,6 +56,7 @@ void loop() {
     EEPROM.put(valorAcumuladoEndereco, valorAcumulado);
     botaoPressionado = false; // Reseta a flag do botão
   }
+*/
 
   // Leia os valores dos LDRs
   int LDR_10C = analogRead(A0);
